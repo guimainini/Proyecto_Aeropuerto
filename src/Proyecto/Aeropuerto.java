@@ -28,6 +28,45 @@ public class Aeropuerto {
         numComponia++;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public Compañia[] getListaCompanias() {
+        return listaCompanias;
+    }
+
+    public int getNumComponia() {
+        return numComponia;
+    }
+
+    public Compañia getCompañia(int i){
+        return listaCompanias[i];
+    }
+
+    public Compañia getCompañia(String nombre){
+        boolean encontrado = false;
+        int i = 0;
+        Compañia c = null;
+        while((!encontrado)&& (i<listaCompanias.length)){
+            if(nombre.equals(listaCompanias.length)){
+                encontrado=true;
+                c = listaCompanias[i];
+            }
+            i++;
+
+        }
+
+        return c;
+    }
 
 
 
